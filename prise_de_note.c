@@ -207,4 +207,63 @@
 
 8. Tableaux
 
+	Déclaration de tableau :
+		int tab[4];
+		tab[0] = 1;
+		tab[1] = 2;
+		tab[2] = 4;
+		tab[3] = 8;
+
+	Un tableau correspond à un pointeur :
+		int tab[2];
+		printf("%d", tab)	; // adresse de la première case du tableau.
+		printf("%d",tab[0]); // valeur de la première case.
+		printf("%d", *tab); // valeur de la première case.
+		printf("%d", *(tab + 1)); // valeur de la deuxième case.
+
+	Tableau à taille dynamique = tableau dont la taille est définie par une variable.
+	Allocation dynamique.
+
+	Parcourir un tableau :
+		int tab[2], i = 0;
+		tab[0]=1;
+		tab[1]=2;
+
+		for (i=0; i<2; i++){ // la variable i est souvent utilisée pour parcourir des tableaux
+			printf("%d", tab[i]);
+		}
+
+	Initialiser toutes les valeurs d'un tableau :
+		int tab[2], i=0;
+		for (i=0; i<2; i++){
+			tab[i]=0; // toutes les variables du tableau sont initialisées à 0
+		}
+
+	Autre façon d'initialiser :
+	int tab[4] = {0, 0, 0, 0} ; // si l'on ne renseigne les valeurs que des premières cases, les autres prennent automatiquement la valeur 0
+
+	Envoyer un tableau à une fonction : // lors de la déclaration de la fonction, pas lors de son utilisation
+		void fonction(*tab)
+		ou
+		void fonction(tab[]) // plus clair ici car les crochets permettent de comprendre que la fonction attend un tableau
+
+9. Chaînes de caractères
+
+	char lettre = 'A';
+	printf("%c", lettre);
+
+	http://www.asciitable.com/
+
+	Une chaîne de caractères est un tableau de variables de type char.
+	La chaîne de caractère doit se terminer par \0 pour indiquer à l'ordinateur que la chaîne s'arrête.
+
+	Initialisation manuelle :
+		char mot[4]={'M','o','t','\0'};
+
+	Initialisation simplifiée :
+		char mot[] = "Mot"; // la taille du tableau est automatiquement calculée
+		ou char *mot = "Mot";
+	L'initialisation simplifiée ne fonctionne que pour l'initialisation; on ne peut pas changer sa valeur ultérieurement juste en mettant =
+
+	#include <string.h>
 
