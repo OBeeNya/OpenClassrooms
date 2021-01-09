@@ -251,11 +251,12 @@
 
 	char lettre = 'A';
 	printf("%c", lettre);
+	printf("%s", string);
 
 	http://www.asciitable.com/
 
 	Une chaîne de caractères est un tableau de variables de type char.
-	La chaîne de caractère doit se terminer par \0 pour indiquer à l'ordinateur que la chaîne s'arrête.
+	La chaîne de caractère doit se terminer par "\0" pour indiquer à l'ordinateur que la chaîne s'arrête.
 
 	Initialisation manuelle :
 		char mot[4]={'M','o','t','\0'};
@@ -263,7 +264,18 @@
 	Initialisation simplifiée :
 		char mot[] = "Mot"; // la taille du tableau est automatiquement calculée
 		ou char *mot = "Mot";
-	L'initialisation simplifiée ne fonctionne que pour l'initialisation; on ne peut pas changer sa valeur ultérieurement juste en mettant =
+	L'initialisation simplifiée ne fonctionne que pour l'initialisation; on ne peut pas changer sa valeur ultérieurement juste en mettant char = "qch"
 
 	#include <string.h>
-
+		
+		strlen : calcul la longueur d'une chaîne (sans compter le \0)
+		Prototype de la fonction strlen : size_t strlen(const char* chaine); // size_t est un type de variable personnalisé ; const permet d'assurer que la fonction ne modifie pas la variable chaine
+		
+		strcpy : copier une chaîne dans une autre
+		Prototype : char* strcpy ( char* copieDeLaChaine , const char* chaineACopier ) ;
+				  
+		strcat : concaténer 2 chaînes
+		Prototype : char* strcat ( char* chaine1 , const char* chaine2 ) ;
+				  
+				  
+				  
