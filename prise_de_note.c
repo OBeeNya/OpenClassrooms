@@ -269,22 +269,33 @@
 	#include <string.h>
 		
 		strlen : calcul la longueur d'une chaîne (sans compter le \0)
-		Prototype de la fonction strlen : size_t strlen(const char* chaine); // size_t est un type de variable personnalisé ; const permet d'assurer que la fonction ne modifie pas la variable chaine
+		size_t strlen(const char* chaine); // size_t est un type de variable personnalisé ; const permet d'assurer que la fonction ne modifie pas la variable chaine
 		
 		strcpy : copier une chaîne dans une autre
-		Prototype : char* strcpy ( char* copieDeLaChaine , const char* chaineACopier ) ;
+		char* strcpy ( char* copieDeLaChaine , const char* chaineACopier ) ;
 				  
 		strcat : concaténer 2 chaînes
-		Prototype : char* strcat ( char* chaine1 , const char* chaine2 ) ;
+		char* strcat ( char* chaine1 , const char* chaine2 ) ;
 				  
 		strcmp : comparer 2 chaînes, rend 1 si différentes ou 0 si identiques (oui c'est contre-intuitif)
-		Prototype : int strcmp ( const char* chaine1 , const char* chaine2 ) ;
+		int strcmp ( const char* chaine1 , const char* chaine2 ) ;
 										       
 		strchr : rechercher un caractère
-		Prototype : char* strchr ( cosnt char* chaine , int caractereARechercher ) ;
+		char* strchr ( cosnt char* chaine , int caractereARechercher ) ;
 		strrchr : renvoie à partir du dernier caractère recherché
 		
-		strpbrk : premire caractère de la liste
-									
+		strpbrk : recherche le premier caractère de la liste apparaissant
+		char* strpbrk ( const char* chaine , const char* lettresARechercher ) ;							
 		
-				  
+		strstr : recherche d'une chaîne dans une autre
+		char* strstr ( const char* chaine1, const char* chaineARechercher ) ;
+		
+		sprintf : écrire dans une chaîne
+		char sprintf ( char , "%" , variable ) ; // prototype à revoir / améliorer
+		Attention n'imprime rien comme printf mais modifie uniquement la chaîne.
+		
+10. Le préprocesseur										       
+								       
+										       
+										       
+										       
