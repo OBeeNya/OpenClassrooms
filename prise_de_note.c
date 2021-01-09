@@ -277,5 +277,14 @@
 		strcat : concaténer 2 chaînes
 		Prototype : char* strcat ( char* chaine1 , const char* chaine2 ) ;
 				  
-				  
+		strcmp : comparer 2 chaînes, rend 1 si différentes ou 0 si identiques (oui c'est contre-intuitif)
+		Prototype : int strcmp ( const char* chaine1 , const char* chaine2 ) ;
+										       
+		strchr : rechercher un caractère
+		Prototype : char* strchr ( cosnt char* chaine , int caractereARechercher ) ;
+		strrchr : renvoie à partir du dernier caractère recherché
+		
+		strpbrk : premire caractère de la liste
+									
+		
 				  
