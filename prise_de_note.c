@@ -305,7 +305,7 @@
 	Les #define sont généralement classés dans les headers.
 				  
 	Exemples :
-		- #define LARGEUR_FENETRE 800
+		- #define LARGEUR_FENETRE 800  1 #ifndef STRUCTUREH
 		  #define HAUTEUR_FENETRE 600
 		- #define TAILLE_MAX_TABLEAU 1000
 		  char tab[TAILLE_MAX_TABLEAU]
