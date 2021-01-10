@@ -350,11 +350,11 @@
 		#endif
 										       
 	Si 2 fichiers headers se référencent l'un l'autre, utiliser #ifndef :
-		#ifndef DEF_NOMDUFICHIER
-		#def DEF_NOMDUFCHIER
+		#ifndef DEF_NOMDUFICHIER // si la définition de la ligne en-dessous n'a jamais été faite, le code de ce fichier sera exécuté 
+		#def DEF_NOMDUFCHIER // on fait la définition ce qui permettra de ne pas exécuter une nouvelle fois le code de ce fichier
 			code du fichier header
 		#endif
-	
+	Ceci évite qu'une combinaison de préprocesseurs fasse tourner l'ordi à l'infini et le fasse planter.
 				
 										       
 										       
