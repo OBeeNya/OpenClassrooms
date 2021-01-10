@@ -356,7 +356,32 @@
 		#endif
 	Ceci évite qu'une combinaison de préprocesseurs fasse tourner l'ordi à l'infini et le fasse planter.
 				
-										       
+11. Créer son propre type de variable
+
+	11.1. Les structures
+	
+		Assemblage de variables dont les types peuvent être différents.
+		struct NomDeLaStructure {
+			int var1 ;
+			float var2 ;
+			char var3 ;
+		} ; // attention à ne pas oublier le point virgule
+		Une structure peut contenir un tableau. Elle sera définie dans le header.
+				  
+		Pour l'utiliser dans une fonction : 
+		struct NomDeLaStructure nomDeLaVariable ;
+				  
+		Pour éviter de retaper struct à chaque fois que l'on veut créer une variable, taper ceci avant : 
+			typedef struct NomDeLaStructure NomDeLaStructure ; // typedef + struct NomDeLaStructure + NomDeLaStructure
+				  
+				  
+				  
+				  
+	
+				  
+				  
+				  
+		
 										       
 										       
 										       
