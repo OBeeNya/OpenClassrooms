@@ -187,7 +187,7 @@
 7. Pointeurs
 
 	type *pointeurSurVariable = NULL ;
-	type *poinnteurSurVariable = &variable ;
+	type *pointeurSurVariable = &variable ;
 
 	printf ( "%d" , pointeurSurVariable ) => adresse de la variable
 	printf ( "%d" , *pointeurSurVariable ) => valeur de la variable
