@@ -323,11 +323,11 @@
 		
 	Définition simple #define CONSTANTE , sans donner immédiatement de valeur.
 				  
-	Macros : #define NOM_DE_LA_MACRO instructions à effectuer ;
+	Macro : #define NOM_DE_LA_MACRO() instructions ;
 	exemple : #define COUCOU() printf("Coucou");
 	Pour une macro avec du code sur plusieurs lignes, mettre un \ à la fin de chaque ligne.
 	
-		
+	Macro avec paramètre : #define NOM_DE_LA_MACRO(noms des variables) instructions; 
 		
 		
 		
