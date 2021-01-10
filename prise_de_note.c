@@ -335,10 +335,27 @@
 		#elif condition2
 			code source2
 		#endif
+	Permet de compiler du code uniquement si une condition de base est vraie.
+				  
+	#ifdef CONSTANTE / #ifndef CONSTANTE : si la constante est définie / n'est pas définie.
+	Peut se coupler avec définition simple.
+	Exemple :
+		#define NOM_DE_L_OS_UTILISE
+		#ifdef WINDOWS
+			code source
+		#ifdef LINUX
+			code source2
+		#ifdef MAC
+			code source3
+		#endif
+										       
+	Si 2 fichiers headers se référencent l'un l'autre, utiliser #ifndef :
+		#ifndef DEF_NOMDUFICHIER
+		#def DEF_NOMDUFCHIER
+			code du fichier header
+		#endif
 	
-		
-										       
-										       
+				
 										       
 										       
 										       
