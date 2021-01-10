@@ -296,6 +296,51 @@
 		
 10. Le préprocesseur										       
 								       
+	Déjà vu #include <library.h> et #include "header.h"
+										       
+	#define : constante de préprocesseur
+	Similaire à une variable constante sauf que :
+		- ça n'occupe pas de mémoire et ça remplace à chaque fois dans le fichier le mot par la valeur (à la manière d'un ctrl+f) ;
+		- le remplacement se fait pour toutes les fonctions du fichier.
+	Les #define sont généralement classés dans les headers.
+				  
+	Exemples :
+		- #define LARGEUR_FENETRE 800
+		  #define HAUTEUR_FENETRE 600
+		- #define TAILLE_MAX_TABLEAU 1000
+		  char tab[TAILLE_MAX_TABLEAU]
+	
+	Calculs dans #define : 
+		#define LARGEUR_FENETRE 800
+		#define HAUTEUR_FENETRE 600
+		#define NOMBRE_PIXELS (LARGEUR_FENETRE * HAUTEUR_FENETRE)
+				  
+	Constantes prédéfinies :
+		__LINE__
+		__FILE__
+		__DATE__
+		__TIME__
+		
+	Définition simple #define CONSTANTE , sans donner immédiatement de valeur.
+				  
+	Macros : #define NOM_DE_LA_MACRO instructions à effectuer ;
+	exemple : #define COUCOU() printf("Coucou");
+	Pour une macro avec du code sur plusieurs lignes, mettre un \ à la fin de chaque ligne.
+	
+		
+		
+		
+		
+										       
+										       
+										       
+										       
+										       
+										       
+										       
+										       
+										       
+										       
 										       
 										       
 										       
