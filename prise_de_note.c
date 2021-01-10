@@ -329,7 +329,13 @@
 	
 	Macro avec paramètre : #define NOM_DE_LA_MACRO(noms des variables) instructions; 
 		
-		
+	Conditions en langage préprocesseur :
+		#if condition
+			code source
+		#elif condition2
+			code source2
+		#endif
+	
 		
 										       
 										       
