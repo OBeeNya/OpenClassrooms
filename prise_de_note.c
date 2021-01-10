@@ -374,9 +374,11 @@
 		Pour éviter de retaper struct à chaque fois que l'on veut créer une variable, taper ceci avant : 
 			typedef struct NomDeLaStructure NomDeLaStructure ; // typedef + struct NomDeLaStructure + NomDeLaStructure
 				  
+		Modifier les composantes de la structure :
+			variable.Composante = 10 ;
 				  
-				  
-				  
+		Possibilité de créer un tableau de structure :
+			structure tableau[] ;
 	
 				  
 				  
