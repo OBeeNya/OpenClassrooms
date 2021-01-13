@@ -411,7 +411,8 @@
 
 	12.1. Ouvrir et fermer un fichier
 	
-		
+		Pour ouvrir un fichier, dans l'ordre :
+			
 										       
 										       
 										       
