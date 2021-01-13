@@ -396,7 +396,16 @@
 				  
 	11.2. Enumérations
 	
-		
+		Une énumération ne contient pas des sous-variables mais une liste de valeurs possibles.
+			enum Volume {
+				FAIBLE , MOYEN , FORT // le compilateur donne automatiquement des valeurs réelles à chacune de ces valeurs mais peu importe lesquels
+			} ;
+		On peut ensuite créer une variable de type énumération Volume à laquelle on initialisera une valeur :
+			Volume musique = FAIBLE ;
+		On peut associer manuellement ces valeurs :
+			enum Volume {
+				MUET = 0 , FAIBLE = 10 , MOYEN = 50 , FORT = 100 
+			} ;
 										       
 										       
 										       
