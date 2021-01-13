@@ -407,7 +407,11 @@
 				MUET = 0 , FAIBLE = 10 , MOYEN = 50 , FORT = 100 
 			} ;
 										       
-										       
+12. Lire et écrire dans des fichiers
+
+	12.1. Ouvrir et fermer un fichier
+	
+		
 										       
 										       
 										       
