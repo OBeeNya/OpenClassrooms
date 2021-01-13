@@ -379,9 +379,20 @@
 				  
 		Possibilité de créer un tableau de structure :
 			structure tableau[] ;
-	
-				  
-				  
+		Modifier valeur d'une structure d'un tableau :
+			exemple : scanf("%s" , tableau[i].variable ) ;
+		
+		Initialiser une structure :
+			variableDeTypeStructure = { "" ; 0 } ; // méthode manuelle
+			Possibilité d'initialiser une structure en l'envoyant via pointeur à une fonction désignée pour ça.
+			
+		Pointeur de structure :
+			Structure *variable = NULL ; // identique à un pointeur d'autre type de variable
+			void initialiserStructure ( structure *variable ) {
+				( *variable ).sousVariable = 0 ; // les parenthèses sont nécessaires car le . ne s'applique sinon qu'à variable
+			}
+			On peut également écrire (dans la fonction) :
+				  variable->sousVariable = 0 ; // ne fonctionne que sur un pointeur
 				  
 		
 										       
