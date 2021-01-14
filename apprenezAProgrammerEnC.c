@@ -436,7 +436,7 @@
 			}		       
 		Fermer le fichier après lecture / écriture pour libérer la mémoire :
 			int fclose ( FILE* pointeurSurFichier ) ; // prototype
-			fclose (fichier) ;
+			fclose (fichier) ; // retourne EOF si erreur
 										       
 	12.2. Lire et écrire
 	
@@ -445,8 +445,10 @@
 			fputc : écrire un caractère à la fois
 				int fputc ( int caractère , FILE* pointeurSurFichier ) ; // prototype
 				fputc ( " caractère " , fichier ) ;
-										       
-
+			fputs : écrire une chaîne de caractères
+				char* fputs ( const char* chaîne , FILE* PointeurSurFichier ) ; // prototype
+				fputs ( "Bonjour tout le monde.\n" , fichier ) ;
+			
 
 
 
