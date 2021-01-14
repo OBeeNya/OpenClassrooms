@@ -413,6 +413,7 @@
 	
 		Fonction d'ouverture de fichier :
 			FILE* fopen(const char* nomDuFichier, const char* modeOuverture); // FILE est une structure définie dans stdio.h
+			fichier = fopen ("test.txt", "r+");
 		Initialisation du pointeur .
 			FILE* fichier = NULL ;
 		modeOuverture :
@@ -426,9 +427,16 @@
 			variableFile ( "dossier/fichier.txt" , modeOuverture ) ; 
 		Fichier dans chemin absolu :
 			variableFile ( "C:\\Program Files\\Notepad\\fichier.txt" , modeOuverture ) ; // les 2 "\\" sont nécessaires pour signifier 1 "\"
-										       
-										       
-										       
+		Après ouverture du fichier, il faut toujours vérifier que l'ouverture a fonctionné :
+			if ( fichier != NULL ) {
+				// on peut écrire dans le fichier
+			}
+			else {
+				// on affiche par exemple un message d'erreur
+			}		       
+		Fermer le fichier après lecture / écriture pour libérer la mémoire :
+			int fclose ( FILE* pointeurSurFichier ) ; // prototype
+			fclose (fichier) ;
 										       
 										       
 										       
