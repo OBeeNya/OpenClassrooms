@@ -412,9 +412,21 @@
 	12.1. Ouvrir et fermer un fichier
 	
 		Pour ouvrir un fichier, dans l'ordre :
-			
-										       
-										       
+			Fonction d'ouverture de fichier :
+				  FILE* fopen(const char* nomDuFichier, const char* modeOuverture); // FILE est une structure définie dans stdio.h
+			Initialisation du pointeur .
+				  FILE* fichier = NULL ;
+			modeOuverture :
+				  "r" lecture seule
+				  "w" écriture seule
+				  "a" mode d'ajout
+				  "r+" lecture et écriture
+				  "w+" lecture et écriture avec suppression du contenu au préalable
+				  "a+" ajout en lecture / écriture à la fin
+			Fichier dans chemin relatif :
+				  variableFile ( "dossier/fichier.txt" , modeOuverture ) ; 
+			Fichier dans chemin absolu :
+				  variableFile ( "C:\\Program Files\\Notepad\\fichier.txt" , modeOuverture ) ; // les 2 "\\" sont nécessaires pour signifier 1 "\"
 										       
 										       
 										       
