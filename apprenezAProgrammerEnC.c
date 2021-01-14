@@ -438,5 +438,17 @@
 			int fclose ( FILE* pointeurSurFichier ) ; // prototype
 			fclose (fichier) ;
 										       
+	12.2. Lire et écrire
+	
+		12.2.1. Ecrire
+		
+			
 										       
-										       
+
+
+
+
+
+
+
+
