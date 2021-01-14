@@ -442,7 +442,9 @@
 	
 		12.2.1. Ecrire
 		
-			
+			fputc : écrire un caractère à la fois
+				int fputc ( int caractère , FILE* pointeurSurFichier ) ; // prototype
+				fputc ( " caractère " , fichier ) ;
 										       
 
 
