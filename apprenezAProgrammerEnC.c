@@ -448,6 +448,12 @@
 			fputs : écrire une chaîne de caractères
 				char* fputs ( const char* chaîne , FILE* PointeurSurFichier ) ; // prototype
 				fputs ( "Bonjour tout le monde.\n" , fichier ) ;
+			fprintf : s'utilise de la même manière que printf
+				  fprintf( fichier , "%d" , int ) ; // par exemple
+				  
+		12.2.2. Lire
+		
+			
 			
 
 
