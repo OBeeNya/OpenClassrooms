@@ -473,9 +473,21 @@
 				  
 	12.3. Se déplacer dans un fichier
 				  
-				  
-				  
-				  
+		ftell : indique à quelle position nous sommes dans un fichier
+			long ftell ( FILE* pointeurSurFichier ) ; // prototype
+		fseek : se positionner dans un fichier
+			int fseek ( FILE* pointeurSurFichier , long deplacement , int origine ) ;
+				  origine peut être :
+				  	SEEK_SET : début du fichier ;
+				  	SEEK_CUR : position actuelle dans le fichier ;
+				  	SEEK_END : fin du fichier ;
+		rewind : revenir au début du fichier
+			void rewind ( FILE* pointeurSurFichier) ;
+	
+	12.4. Renommer et supprimer un fichier
+	
+		int rename ( const char* ancienNom , const char* nouveauNom ) ; // renvoie 0 si bien modifié sinon renvoie autre valeur
+		int remove ( const char* fichier) ;
 				  
 				  
 				  
