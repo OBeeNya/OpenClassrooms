@@ -453,6 +453,43 @@
 				  
 		12.2.2. Lire
 		
+			fgetc : lire un caractère
+				int fgetc ( FILE* pointeurDeFichier ) ; // prototype
+			fgets : lit une chaîne // lit maximum une ligne
+				char* fgets ( char* chaîne , int nbDeCaracteres , FILE* pointeurSurFichier ) ; // prototype
+				Pour l'utiliser, il faut donc créer une chaîne de caractères assez grande pour contenir tout le contenu d'une ligne.
+					#define TAILLE_MAX_CHAINE 1000
+				  	FILE* fichier = NULL ;
+				  	char chaine [TAILLE_MAX_CHAINE] = "" ; // chaine est créé pour stocker le contenu de la ligne que l'on va lire
+				  	fichier = fopen ( "fichier.txt" , "r" ) ;
+				  	if ( fichier != NULL ) {
+						fgets ( chaine , TAILLE_MAX_CHAINE , fichier ) ;
+					}
+				Utiliser une boucle pour lire plusieurs lignes :
+				  	while ( fgets ( chaine , TAILLE_MAX_CHAINE , fichier ) != NULL ) {...}
+			fscanf : 
+				fscanf ( fichier , "%typeDeVariable" , &variable ) ; // le fichier dans lequel on lit doit avoir été écrit d'une façon qui nous permet de récupérer les variables
+				On peut scanner plusieurs éléments à la fois.
+				  
+	12.3. Se déplacer dans un fichier
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+			
 			
 			
 
