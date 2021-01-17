@@ -489,8 +489,16 @@
 		int rename ( const char* ancienNom , const char* nouveauNom ) ; // renvoie 0 si bien modifié sinon renvoie autre valeur
 		int remove ( const char* fichier) ;
 				  
-				  
-				  
+13. Allocation dynamique
+
+	13.1. La taille des variables
+	
+		siezof ( typeDeVariable ) ; // 
+		Peut changer en fonction des machines, mais typiquement :
+			sizeof (char) = 1 octet
+		 	sizeof (int) = 4 octets
+		 	sizeof (long) = 8 octets
+		Fonctionne sur les structures.
 				  
 				  
 				  
