@@ -500,6 +500,42 @@
 		 	sizeof (long) = 8 octets
 		Fonctionne sur les structures.
 				  
+	13.2. Allocation de mémoire dynamique
+	
+		malloc : demande d'allocation de mémoire
+			void* malloc ( size_t nombreOctetsNécessaires) ; // paramètre peut donc être remplacé par sizeof(var)
+			int* memoireAllouee = NULL ; 
+			memoireAllouee = malloc ( sizeof(int) ) ; // memoireAllouee contient l'adresse réservée par l'OS
+		Comme pour FILE, il faut toujours tester que l'allocation de mémoire ait réussie :
+			if ( memoireAllouee == NULL ) {
+				exit (0) ; // on arrête le programme
+			}
+		free : libérer la mémoire
+			void free ( void* pointeur ); // prototype
+			free ( memoireAllouee ) ;
+				  
+		Exemple d'utilisation :
+			int* memoireAllouee = NULL ;
+			memoireAllouee = malloc ( sizeof(int) );
+			if ( memoireAllouee == NULL ) {
+				exit (0);
+			}
+			printf("Quel age avez-vous ? ");
+    			scanf("%d", memoireAllouee);
+    			printf("Vous avez %d ans\n", *memoireAllouee);
+    			free(memoireAllouee); 
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
 				  
 				  
 				  
