@@ -506,15 +506,17 @@
 			void* malloc ( size_t nombreOctetsNécessaires) ; // paramètre peut donc être remplacé par sizeof(var)
 			int* memoireAllouee = NULL ; 
 			memoireAllouee = malloc ( sizeof(int) ) ; // memoireAllouee contient l'adresse réservée par l'OS
+				  
 		Comme pour FILE, il faut toujours tester que l'allocation de mémoire ait réussie :
 			if ( memoireAllouee == NULL ) {
 				exit (0) ; // on arrête le programme
 			}
+				  
 		free : libérer la mémoire
 			void free ( void* pointeur ); // prototype
 			free ( memoireAllouee ) ;
 				  
-		Exemple d'utilisation :
+		Exemple d'utilisation : 
 			int* memoireAllouee = NULL ;
 			memoireAllouee = malloc ( sizeof(int) );
 			if ( memoireAllouee == NULL ) {
@@ -523,11 +525,13 @@
 			printf("Quel age avez-vous ? ");
     			scanf("%d", memoireAllouee);
     			printf("Vous avez %d ans\n", *memoireAllouee);
-    			free(memoireAllouee); 
+    			free(memoireAllouee); // exemple simple qui n'est généralement pas la façon dont on utilise l'allocation dynamique
 				  
+	13.3. Allocation dynamique d'un tableau
 				  
-				  
-				  
+		Le plus souvent, on utilise l'allocation dynamique pour créer un tableau dont on ne connaît pas la taille à l'avance.
+		int tab[nombreDeVar] ; // fonctionne sur certains compilateurs mais n'est pas recommandé !
+		tableau = malloc ( nombreDeVariables * sizeof(typeDeVariable ) ;		  
 				  
 				  
 				  
