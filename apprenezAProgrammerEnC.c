@@ -533,7 +533,9 @@
 		int tab[nombreDeVar] ; // fonctionne sur certains compilateurs mais n'est pas recommandé !
 		tableau = malloc ( nombreDeVariables * sizeof(typeDeVariable ) ;		  
 				  
-				  
+14. Saisie de texte sécurisée
+
+	
 				  
 				  
 				  
