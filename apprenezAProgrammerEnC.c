@@ -535,9 +535,16 @@
 				  
 14. Saisie de texte sécurisée
 
+	14.1. Les limites de scanf
 	
+		scanf s'arrête quand il rencontre un espace, \n ou tab.
+		Cependant, ce qui se trouve après l'un de ces 3 éléments est toujours stocké en mémoire et sera utilisé lors de la prochaine lecture.
+		Idem si on saisit une variable plus grande que la mémoire qui lui était allouée.
+		On appelle ça un dépassement de tampon, ou buffer overflow.
 				  
-				  
+	14.2. La fonction fgets
+	
+		fgets (fonction déjà vue) permet de contrôler le nombre de caractères écrit en mémoire.
 				  
 				  
 				  
