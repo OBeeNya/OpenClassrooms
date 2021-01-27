@@ -581,9 +581,18 @@
 			}
 		La fonction int fflush(FILE* stream) existe déjà sinon.		  
 				  
+	14.3. Convertir une chaîne en nombre
+	
+		fgets ne fonctionne que pour récupérer du texte.
+		
+		strtol : permet de convertir le texte en long
+		long strtol ( const char* start, char** end, int base ); // prototype
+		start : chaine de caractères à convertir en long
+		end : pointeur de pointeur qui renvoie la position du premier caractère lu // mettre à NULL pour le moment
+		base : base 10 pour des chiffres de 0 à 9
 				  
-				  
-				  
+		strtod : permet de convertir le texte en double
+		double strtod ( const char* start, char** end );
 				  
 				  
 				  
