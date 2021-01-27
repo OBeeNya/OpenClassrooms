@@ -282,7 +282,7 @@
 										       
 		strchr : rechercher un caractère
 		char* strchr ( cosnt char* chaine , int caractereARechercher ) ;
-		strrchr : renvoie à partir du dernier caractère recherché
+		strchr : renvoie à partir du dernier caractère recherché
 		
 		strpbrk : recherche le premier caractère de la liste apparaissant
 		char* strpbrk ( const char* chaine , const char* lettresARechercher ) ;							
@@ -545,8 +545,30 @@
 	14.2. La fonction fgets
 	
 		fgets (fonction déjà vue) permet de contrôler le nombre de caractères écrit en mémoire.
-				  
-				  
+		char* fgets (char* str, int num, FILE* stream);
+			str : pointeur vers un tableau alloué en mémoire où la fonction va pouvoir écrire le texte entré par l'utilisateur
+			num : taille du tableau
+			stream : peut être le fichier où l'on va lire (comme vu précédemment), ou stdin pour clavier
+		
+		Attention le fgets enregistre le \n quand on saisit unmot puis tape entrée.
+		Fonction permettant de ne pas conserver le \n :
+			int lire(char* chaine, int longueur)
+			{
+				char* positionEntree = NULL ;
+				if (fgets(chaine,longueur,stdin)!=NULL)
+				{
+					positionEntree=strchr(chaine,'\n');
+					if(positionEntree!=NULL)
+					{
+						*positionEntree='\0';
+					}
+					return 1;
+				}
+				else
+				{
+					return 0;
+				}
+			}
 				  
 				  
 				  
