@@ -593,18 +593,3 @@
 				  
 		strtod : permet de convertir le texte en double
 		double strtod ( const char* start, char** end );
-				  
-				  
-				  
-				  
-				  
-			
-			
-			
-
-
-
-
-
-
-
